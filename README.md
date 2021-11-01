@@ -1,17 +1,25 @@
 # Movie app
 
+## Basic React
+### component
+- HTML을 반환하는 함수
+- jsx
+- react application은 하나의 component만 렌더링
+- 하나의 component는 서로 다른 component들을 포함할 수 있음
+- react는 component를 가져와 Browser에 HTML로 표현
 
 ## ERROR
 
-
+Error 내용
 ```sh
 ERR_CONNECTION_REFUSED
 
 Package subpath './lib/tokenize' is not defined by "exports"
 ```
 
-
-등 여러 오류를 해결하는 방법은 node js 재설치입니다.. 하단 코드 참고하세요!
+  
+***   
+node js stable 버전 설치로 해결 
 
 
 ```js
@@ -19,5 +27,5 @@ npm install -g n
 sudo n stable
 ```
 
-로 js 버전을 stable로 설치하시면 됩니다. (21/11/1 => 16.13.0v 사용중)
-# Movie-App
+
+2021.11.01 => 16.13.0 버전 사용
