@@ -1,5 +1,19 @@
 # Movie app
 
+# movieApp
+
+## react 준비하기
+node,  npx, npm 설치
+
+```sh
+cd Documents
+npx create-react-app movieApp
+```
+
+
+자세한 정보는 [여기](https://github.com/facebook/create-react-app "facebook 깃허브")를 클릭하세요.
+
+
 ## Basic React
 ### component
 - HTML을 반환하는 함수
