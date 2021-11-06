@@ -1,7 +1,5 @@
 # Movie app
 
-# movieApp
-
 ## react 준비하기
 node,  npx, npm 설치
 
@@ -21,6 +19,33 @@ npx create-react-app movieApp
 - react application은 하나의 component만 렌더링
 - 하나의 component는 서로 다른 component들을 포함할 수 있음
 - react는 component를 가져와 Browser에 HTML로 표현
+
+### state Function
+
+> 직접 값을 설정하는 방법
+>
+>
+> ```jsx
+> const [counter, setCounter] = React.userState(0);
+> setCounter(1);
+> ```
+>
+>
+
+> 현재 state로 다음 state 계산하는 방법
+>
+>
+> ``` jsx
+> const [counter, setCounter] = React.useState(0);
+> setCounter((current) => current + 1)
+> //setCounter(counter + 1);
+> ```
+>
+>
+> 예상치 못한 업데이트가 일어났을 때 반응하지 않아 혼동을 주지 않음. (안정적인 방법)
+
+
+
 
 ## ERROR
 
