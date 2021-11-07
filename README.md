@@ -22,6 +22,22 @@ npm을 사용하여 react 실행하기 (개발자 서버 자동 연결)
 npm start
 ```
 
+### React Proptype
+속성(prop) 값의 형식 확인을 도와줌
+
+
+``` sh
+npm i prop-types
+```
+
+
+``` jsx button.js
+import PropTypes from "prop-types";
+Button.PropTypes = {
+    text: PropTypes.string;
+}
+```
+
 
 자세한 정보는 [여기](https://github.com/facebook/create-react-app "facebook 깃허브")를 클릭하세요.
 
@@ -63,6 +79,10 @@ index.js => index.html
 > 예상치 못한 업데이트가 일어났을 때 반응하지 않아 혼동을 주지 않음. (안정적인 방법)
 
 
+### CSS
+style.css 작성
+
+index.js에 import
 
 
 ## ERROR
