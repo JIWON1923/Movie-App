@@ -1,6 +1,7 @@
 # Movie app
 
 ## react 준비하기
+### React 프로젝트 만들기
 nodejs,  npx, npm 설치
 react app 만들기
 
@@ -14,6 +15,9 @@ npx create-react-app movieApp
 npm을 사용하여 react 실행하기 (개발자 서버 자동 연결)
 
 
+### React 시작하기
+
+ 
 ``` sh
 npm start
 ```
@@ -22,6 +26,8 @@ npm start
 자세한 정보는 [여기](https://github.com/facebook/create-react-app "facebook 깃허브")를 클릭하세요.
 
 
+### React 파일
+index.js => index.html
 ## Basic React
 ### component
 - HTML을 반환하는 함수
