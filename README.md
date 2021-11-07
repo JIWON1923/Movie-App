@@ -1,11 +1,21 @@
 # Movie app
 
 ## react 준비하기
-node,  npx, npm 설치
+nodejs,  npx, npm 설치
+react app 만들기
+
 
 ```sh
 cd Documents
 npx create-react-app movieApp
+```
+
+
+npm을 사용하여 react 실행하기 (개발자 서버 자동 연결)
+
+
+``` sh
+npm start
 ```
 
 
@@ -20,9 +30,10 @@ npx create-react-app movieApp
 - 하나의 component는 서로 다른 component들을 포함할 수 있음
 - react는 component를 가져와 Browser에 HTML로 표현
 
+
 ### state Function
 
-> 직접 값을 설정하는 방법
+> ** 직접 값을 설정하는 방법 **
 >
 >
 > ```jsx
@@ -32,7 +43,8 @@ npx create-react-app movieApp
 >
 >
 
-> 현재 state로 다음 state 계산하는 방법
+
+> ** 현재 state로 다음 state 계산하는 방법 **
 >
 >
 > ``` jsx
