@@ -1,24 +1,36 @@
 import React from "react";
-import Button from "./Button"; 
+import Button from "./Button";
 import styles from "./App.module.css";
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react"
 
-function Hello(){
-  useEffect( () => {
-    console.log("created"); // component 생성
-    return () => console.log("destroyed"); }) // component 소멸
-  return(
-    <h1>Hello</h1>
-  )
-}
 
 function App() {
-  const [showing, setShowing] = useState(false);
-  const onClick = () => setShowing((prev) => !prev);
-  return(
+  const [toDo, setToDo] = useState('');
+  const [toDos, setToDos] = useState([]);
+  const onChange = (event) => setToDo(event.target.value);
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (toDo == '') return; // todo가 비어있다면 함수 작동 x
+    setToDos((currentArray => [toDo, ...currentArray])) // 기존 값과 새로운 값을 리스트로 연결
+    setToDo(""); // 비어있지 않은 상태에서 submit 하면 input 초기화
+  };
+
+  return (
     <div>
-      {showing ? <Hello/> : null}
-      <button onClick = {onClick} >{ showing ? "Hide" : "Show" }</button>
+      <h1> MY TODO ({toDos.length})</h1>
+      <form onSubmit={onSubmit}>
+        <input
+          onChange={onChange}
+          value={toDo}
+          type="text"
+          placeholder="Write your todo..." />
+        <button>Add To Do </button>
+      </form>
+      <ul>
+        {toDos.map((item, index) =>
+          <li>{index, item}</li>)}
+      </ul>
     </div>
   )
 }

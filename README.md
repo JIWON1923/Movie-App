@@ -106,7 +106,7 @@ Button.PropTypes = {
 
 --- 
 
-## ERROR
+## 3. ERROR
 
 > **Error 내용**
 > ```sh
