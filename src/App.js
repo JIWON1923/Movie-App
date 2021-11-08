@@ -29,7 +29,7 @@ function App() {
       </form>
       <ul>
         {toDos.map((item, index) =>
-          <li>{index, item}</li>)}
+          <li key = {index}>{ item}</li>)}
       </ul>
     </div>
   )
