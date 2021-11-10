@@ -105,7 +105,7 @@ Button.PropTypes = {
 >  
   
 ### React Router
-> 페이지를 전환하는 역할을 한다.
+> #### 1) 설치방법
 > 
 >
 > ```sh
@@ -113,10 +113,34 @@ Button.PropTypes = {
 > ```
 >
 >
-> 설치 이후 코드를 스크린단위(router)로 변경해야한다.  
-> Movies, Details는 component가 되고, 기존 App.js는 Home.js로 메인 Router가 된다.  
-> Router = URL을 기반으로 해당 위치에 맞는 Component를 보여준다.  
+> #### 2) 기본 개념
+> Router : URL 기반의 컴포넌트를 보여준다.  
+> Routes : 한 번의 하나의 Route만 렌더링 할 때 사용한다.  
+> Route  : Router(URL)을 찾은 후 렌더링한다.  
+> Link   : 새로고침 없이 페이지 간 이동 가능하도록 한다. (a 태그는 새로고침이 있다.)  
 >
+> #### 3) 코드 변경
+> 기존 코드를 스크린 단위 (Router)로 변경한다.
+> Router(Page) = Detail.js, Home.js, Component(Function) = Movie.js  
+>
+> #### 4) 예시 코드
+>
+>
+> ```jsx:App.js
+> function App() { // router를 render하도록
+  return (
+    <Router>  
+      <Routes>  
+        <Route path="/movie" element={<Detail />} />  
+        <Route path="/" element={<Home />} />  
+      </Routes>  
+    </Router>  
+  );  
+}  
+> ```
+>
+>
+> 공식 사이트 튜토리얼 코드를 보려면 [여기](https://reactrouter.com/docs/en/v6/getting-started/tutorial "React Router 공식 홈페이지")를 클릭하세요   
 
 --- 
 
