@@ -127,16 +127,17 @@ Button.PropTypes = {
 >
 >
 > ```jsx:App.js
+>import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 > function App() { // router를 render하도록
-  return (
-    <Router>  
-      <Routes>  
-        <Route path="/movie" element={<Detail />} />  
-        <Route path="/" element={<Home />} />  
-      </Routes>  
-    </Router>  
-  );  
-}  
+>  return (
+>    <Router>  
+>      <Routes>  
+>        <Route path="/movie" element={<Detail />} />  
+>        <Route path="/" element={<Home />} />  
+>      </Routes>  
+>    </Router>  
+>  );  
+>}  
 > ```
 >
 >
