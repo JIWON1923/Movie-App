@@ -49,9 +49,9 @@ Button.PropTypes = {
 > HTML을 반환하는 함수이다.  
 > react application은 하나의 component만 렌더링한다.   
 > 하나의 component는 서로 다른 component들을 포함할 수 있다.  
-> react는 component를 가져와 Browser에 HTML로 표현한다.  
+> react는 component를 가져와 Browser에 HTML로 표현한다.    
 
-
+  
 ### state Function
 
 > **직접 값을 설정하는 방법**
@@ -62,9 +62,9 @@ Button.PropTypes = {
 > setCounter(1);
 > ```
 >
->
+>  
 
-
+  
 > **현재 state로 다음 state 계산하는 방법**
 >
 >
@@ -75,9 +75,9 @@ Button.PropTypes = {
 > ```
 >
 >
-> 예상치 못한 업데이트가 일어났을 때 반응하지 않아 혼동을 주지 않음. (안정적인 방법)
+> 예상치 못한 업데이트가 일어났을 때 반응하지 않아 혼동을 주지 않음. (안정적인 방법)  
 
-
+  
 ### useEffect
 > 특정 state가 변경될 때에만 새로고침 될 수 있도록 한다. (API 사용 시 유용)
 >
@@ -86,8 +86,8 @@ Button.PropTypes = {
 > useEffect(() => { /* code */ }, [/* 변수명, 변수명 (Dependancy List) */ ] ) // 해당 변수의 state가 바뀔 때에만 함수 호출
 > ```
 >
-> 만약 Dependancy List가 비어있다면, 코드는 딱 한 번만 실행된다.
-
+> 만약 Dependancy List가 비어있다면, 코드는 딱 한 번만 실행된다.  
+  
 ### cleanUp function
 > 특정 component가 소멸될 때 호출되는 함수를 만들 수 있다.
 > useEffect 함수에서 return문에 해당된다.
@@ -102,6 +102,20 @@ Button.PropTypes = {
 > }
 > ```
 >
+>  
+  
+### React Router
+> 페이지를 전환하는 역할을 한다.
+> 
+>
+> ```sh
+> npm install react-router-dom
+> ```
+>
+>
+> 설치 이후 코드를 스크린단위(router)로 변경해야한다.  
+> Movies, Details는 component가 되고, 기존 App.js는 Home.js로 메인 Router가 된다.  
+> Router = URL을 기반으로 해당 위치에 맞는 Component를 보여준다.  
 >
 
 --- 
@@ -138,7 +152,7 @@ Button.PropTypes = {
 > ```
 >
 >
-> ** 해결 방법 **
+> **해결 방법**
 > 
 >
 > ```sh:Movie.js
@@ -148,3 +162,4 @@ Button.PropTypes = {
 >
 > 해당 코드를 입력하고, App.js 에서 import 하면 된다.   
 > 만약 위 코드를 쓰지 않았다면, import {Movie} from "./Movie"로 작성해야한다.  
+> 즉, import처럼 export 할 때의 선언해주는 문장이다.  
