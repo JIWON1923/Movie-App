@@ -126,3 +126,25 @@ Button.PropTypes = {
 >
 >
 > 2021.11.01 => 16.13.0 버전 사용
+
+---
+
+> **Error 내용**
+>
+>
+> ```sh
+> ./src/App.js
+> Attempted import error: './TodoContext' does not contain a default export (imported as 'TodoProvider').
+> ```
+>
+>
+> ** 해결 방법 **
+> 
+>
+> ```sh:Movie.js
+> export default Movie;
+> ```
+>
+>
+> 해당 코드를 입력하고, App.js 에서 import 하면 된다.   
+> 만약 위 코드를 쓰지 않았다면, import {Movie} from "./Movie"로 작성해야한다.  
