@@ -145,7 +145,7 @@ Button.PropTypes = {
 
 
 ### Parameters
-> 동적 URL : URL에 변수를 넣는 것 (https://주소명.com/변수명)
+> 동적 URL : URL에 변수를 넣는 것  ( 사이트주소.com/**변수명** )
 > #### 동적 URL 선언하기
 >
 >
@@ -173,6 +173,7 @@ Button.PropTypes = {
 >    const {id} = useParams(); //App.js에서 id라는 변수 명을 기억한다면! 그러지 않으면 중괄호 빼고
 >    console.log(id);
 > }
+>```
 >
 >
 > => URL에서 사용한 변수(id)의 값을 넘겨준다.(console값 확인)  
