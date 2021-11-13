@@ -143,6 +143,40 @@ Button.PropTypes = {
 >
 > 공식 사이트 튜토리얼 코드를 보려면 [여기](https://reactrouter.com/docs/en/v6/getting-started/tutorial "React Router 공식 홈페이지")를 클릭하세요   
 
+
+### Parameters
+> 동적 URL : URL에 변수를 넣는 것 (https://주소명.com/변수명)
+> #### 동적 URL 선언하기
+>
+>
+> ```jsx:App.js
+> import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+> function App() { // router를 render하도록
+>  return (
+>    <Router>
+>      <Routes>
+>        <Route path="/movie/:id" element={<Detail />} />
+>        <Route path="/" element={<Home />} />
+>      </Routes>
+>    </Router>
+>  );
+> }
+> ```
+>
+>
+> #### 동적 URL 가져오기
+>
+>
+> ```js:Detail.js
+> import {useParams} from "react-router-dom"
+> function Detail(){
+>    const {id} = useParams(); //App.js에서 id라는 변수 명을 기억한다면! 그러지 않으면 중괄호 빼고
+>    console.log(id);
+> }
+>
+>
+> => URL에서 사용한 변수(id)의 값을 넘겨준다.(console값 확인)  
+
 --- 
 
 ## 3. ERROR
