@@ -223,3 +223,41 @@ Button.PropTypes = {
 > 해당 코드를 입력하고, App.js 에서 import 하면 된다.   
 > 만약 위 코드를 쓰지 않았다면, import {Movie} from "./Movie"로 작성해야한다.  
 > 즉, import처럼 export 할 때의 선언해주는 문장이다.  
+
+---
+
+**4. Publishing**
+> 1) 패키지 설치 및 빌드
+>
+>
+>```sh
+> npm i gh-pages    # package 설치
+> npm run build     # production ready code 생성 (최적화)
+>```
+>
+>
+> 2) git 사이트 등록 (코드가 있는 repository)
+>
+>
+>```json:package.json
+> ,
+>  "homepage": "https://깃허브USERNAME.github.io/REPOSITORY_NAME" // 맨 마지막에 추가
+> // git remote -v로 repository name 확인 가능
+>```
+>
+>
+> 3) script 수정
+>
+>
+> ```json:package.json
+> "scripts": {
+>    "start": "react-scripts start",
+>    "build": "react-scripts build",
+>    "test": "react-scripts test",
+>    "eject": "react-scripts eject",
+>    "deploy": "gh-pages -d build", // gh-pages를 실행시킨 후 build 디렉토리를 가져감
+>    "predeploy" : "npm run build" // deploy가 실행되기 전 해당 명령문 실행 (build 후 deploy 실행 가능하도록)
+>  },
+>```
+>
+>
